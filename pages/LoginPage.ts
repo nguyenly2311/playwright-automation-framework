@@ -36,9 +36,13 @@ export class LoginPage extends BasePage {
     }
 
     async login() {
+        await this.navigateToLoginPage();
+
         await this.enterUsername();
         await this.enterPassword();
         await this.clickLoginButton();
+
+        await this.verifyLoginSuccessfully();
     }
 
     async verifyLoginSuccessfully() {

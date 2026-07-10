@@ -1,8 +1,10 @@
 import { test as setup } from "@playwright/test";
-import { LoginHelper } from "../../utils/LoginHelper";
+import { LoginPage } from "../../pages/LoginPage";
 
 setup("Authenticate", async ({ page }) => {
-    await LoginHelper.login(page);
+    const loginPage = new LoginPage(page);
+
+    await loginPage.login();
 
     await page.context().storageState({
         path: "playwright/.auth/user.json",
