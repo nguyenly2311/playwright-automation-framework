@@ -1,0 +1,1 @@
+export const ENV={baseUrl:'https://example.com'};
