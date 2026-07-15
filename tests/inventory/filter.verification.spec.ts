@@ -1,6 +1,23 @@
-import { test } from "../../../fixtures/baseTest";
-import { InventoryPage } from "../../../pages/InventoryPage";
-import { FilterOption } from "../../../constants/FilterOption";
+/**
+ * ============================================================================
+ * Test Suite: Verify the Filter Functionality and Business Flow of SauceDemo.
+ * ============================================================================
+ * 
+ * Test Coverage:
+ * - Verify the product name will be filtered from A to Z (asc).
+ * - Verify the product name will be filtered from Z to A (desc).
+ * - Verify the product price will be filtered from low to high (asc).
+ * - Verify the product price will be filtered from high to low (desc).
+ * 
+ * Preconditions:
+ * - User is authenticated (Storage State)
+ * - User is on Inventory page
+ * ============================================================================
+ */
+
+import { test } from "../../fixtures/baseTest";
+import { InventoryPage } from "../../pages/InventoryPage";
+import { FilterOption } from "../../constants/FilterOption";
 
 test.describe("Inventory Filter Verification", () => {
 
